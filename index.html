@@ -1,167 +1,112 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Poster GoNuts Bites</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Titan+One&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #e5e7eb;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 2rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .poster-container {
-            width: 100%;
-            max-width: 600px;
-            background-color: #FDFBF7;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: calc(600px * 1.414);
-        }
-
-        .font-heading {
-            font-family: 'Titan One', cursive;
-        }
-
-        .poster-container::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 160px;
-            height: 160px;
-            background: #3D8B40;
-            border-radius: 50%;
-            opacity: 0.15;
-            filter: blur(24px);
-            pointer-events: none;
-        }
-
-        .poster-container::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -40px;
-            width: 128px;
-            height: 128px;
-            background: #F29C13;
-            border-radius: 50%;
-            opacity: 0.15;
-            filter: blur(24px);
-            pointer-events: none;
-        }
-
-        .heading-gonuts {
-            font-family: 'Titan One', cursive;
-            font-size: clamp(2.5rem, 10vw, 3.75rem);
-            color: #3D8B40;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-            letter-spacing: 0.05em;
-        }
-
-        .heading-gonuts span {
-            color: #7A3E1B;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoNuts Bites - Wrap Dip Enjoy!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #4e342e;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #FF9800;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero img {
+      max-width: 300px;
+      margin: 1rem;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: #D2691E;
+      font-weight: bold;
+    }
+    .features {
+      background: #fff3e0;
+      padding: 1rem 2rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta button {
+      background: #FF9800;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      background: #8D6E63;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="poster-container">
+  <header>
+    <h1>GoNuts Bites</h1>
+    <h2>WRAP • DIP • ENJOY!</h2>
+  </header>
 
-        <div class="relative z-10 pt-8 px-8 text-center">
+  <section class="hero">
+    <img src="wrap-slice.png" alt="Gado-Gado Roll" />
+    <img src="sambal-kacang.png" alt="Sambal Kacang Pecel" />
+    <p class="price">Mulai Rp12.000 / 4 pcs</p>
+  </section>
 
-            <div class="absolute top-6 left-6 w-16 h-16 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center bg-white shadow-sm">
-                <span class="text-[10px] text-gray-500 font-bold text-center leading-tight">Logo<br>Kampus</span>
-            </div>
+  <section class="features">
+    <h3>Kenapa GoNuts?</h3>
+    <ul>
+      <li>✅ Sayuran segar & bergizi</li>
+      <li>✅ Saus kacang pecel khas Indonesia</li>
+      <li>✅ Praktis & bisa dinikmati kapan saja</li>
+      <li>✅ Kemasan ramah lingkungan</li>
+    </ul>
+  </section>
 
-            <div class="mt-4 pl-10">
-                <h1 class="heading-gonuts">
-                    Go<span>Nuts</span>
-                </h1>
-                <div class="inline-block px-4 py-1 mt-1 bg-[#FFEFA9] rounded-full transform -rotate-2">
-                    <h2 class="font-heading text-2xl" style="color: #7A3E1B;">BITES</h2>
-                </div>
-            </div>
+  <div class="cta">
+    <button>PESAN SEKARANG</button>
+  </div>
 
-            <p class="mt-4 text-[#3D8B40] font-bold tracking-wide text-sm uppercase bg-green-50 inline-block px-4 py-1 rounded-full border border-green-200">
-                Inovasi Healthy Veggie Snack Generasi Z
-            </p>
-        </div>
-
-        <div class="relative z-10 flex items-center justify-center flex-col mt-6 py-4">
-            <svg class="absolute w-[80%] h-auto z-0 pointer-events-none"
-                 style="color: #FFEFA9;"
-                 viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.3,-46.1C90.8,-33.1,96.8,-16.5,95.5,-0.7C94.2,15.1,85.6,30.2,75.2,42.8C64.8,55.4,52.6,65.5,39.1,72.4C25.6,79.3,12.8,83,-1.2,85C-15.2,87,-30.4,87.3,-43.5,80.7C-56.6,74.1,-67.6,60.6,-75.4,45.8C-83.2,31,-87.8,15.5,-86.7,0.6C-85.6,-14.3,-78.8,-28.6,-70.6,-41.4C-62.4,-54.2,-52.8,-65.5,-40.4,-73.4C-28,-81.3,-14,-85.8,0.7,-87.1C15.4,-88.4,30.7,-83.6,44.7,-76.4Z" transform="translate(100 100) scale(1.1)" />
-            </svg>
-
-            <div class="relative z-10 w-64 h-64 bg-white/80 backdrop-blur-sm border-4 border-dashed border-[#3D8B40] rounded-full shadow-xl flex flex-col items-center justify-center hover:scale-105 transition duration-300">
-                <span class="text-6xl mb-2">🥗🌯</span>
-                <p class="text-sm font-bold text-center text-gray-500 px-4">
-                    [ Letakkan Foto<br>Gado-Gado Roll & Saus<br>di Sini (Tanpa Background) ]
-                </p>
-
-                <div class="absolute -top-4 -right-8 bg-[#F29C13] text-white font-heading px-4 py-3 rounded-full shadow-lg transform rotate-12 border-4 border-white">
-                    <span class="block text-xs uppercase tracking-wider">Mulai</span>
-                    <span class="block text-xl">Rp 12K</span>
-                </div>
-            </div>
-
-            <div class="relative z-10 mt-8 bg-[#FFEFA9] border-2 border-[#F29C13] px-8 py-2 rounded-full shadow-md transform -rotate-1">
-                <p class="font-heading text-[#7A3E1B] text-xl tracking-widest">WRAP • DIP • ENJOY!</p>
-            </div>
-        </div>
-
-        <div class="relative z-10 px-8 pb-8 mt-6">
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-[#3D8B40] text-white p-5 rounded-2xl shadow-md flex flex-col justify-center transform -rotate-1">
-                    <h3 class="font-heading text-xl mb-2 text-[#FFEFA9]">Gado-Gado Reimagined!</h3>
-                    <p class="text-xs leading-relaxed font-medium">
-                        Bosan jajan junk food? GoNuts Bites hadir! Gado-gado tradisional yang disajikan praktis ala <i>Vietnamese spring roll</i>. Sekali <i>hap</i>, sehat, dan bernutrisi tinggi untuk menemanimu beraktivitas!
-                    </p>
-                </div>
-                <div class="flex flex-col justify-center space-y-3 pl-2">
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">🥬</span>
-                        <p class="text-xs font-bold text-gray-700 leading-tight pt-1"><span class="text-[#3D8B40]">Fresh & Healthy:</span> 100% Sayuran segar tanpa minyak berlebih.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">🏃</span>
-                        <p class="text-xs font-bold text-gray-700 leading-tight pt-1"><span class="text-[#F29C13]">Praktis:</span> One-bite size, anti ribet dan berantakan.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">🌶️</span>
-                        <p class="text-xs font-bold text-gray-700 leading-tight pt-1"><span class="text-[#7A3E1B]">Pilihan Saus:</span> Original & Pedas Nampol!</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">📦</span>
-                        <p class="text-xs font-bold text-gray-700 leading-tight pt-1"><span class="text-[#3D8B40]">Eco-Friendly:</span> Kemasan ramah lingkungan.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-[#7A3E1B] text-white py-4 px-8 mt-auto flex justify-between items-center text-[10px] relative z-10">
-            <div class="font-medium">
-                <p class="font-bold text-[#FFEFA9] mb-1">Business Project 2026 - Fakultas Bisnis</p>
-                <p>Tim Founder: Alexander, Cindy, M. Fuad Yahya, Shirley V.</p>
-            </div>
-            <div class="text-right font-bold opacity-80 max-w-[120px]">
-                Institut Bisnis dan Teknologi Pelita Indonesia
-            </div>
-        </div>
-
-    </div>
+  <footer>
+    Business Project 2026 – Fakultas Bisnis<br />
+    Tim: Alexander, Cindy, Fuad, Shirley
+  </footer>
 
 </body>
 </html>
